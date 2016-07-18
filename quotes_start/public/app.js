@@ -10,7 +10,7 @@ function main(){
   var ul = document.getElementById( 'quote-list' );
   for(var i = 0; i < quoteList.length; i++) {
     var li = document.createElement( 'li' );
-    li.innerText = "\n" + "'" + quoteList[i].quote + "'" + " - " + quoteList[i].author;
+    li.innerText = "\n" + quoteList[i].quote + " - " + quoteList[i].author;
     ul.appendChild( li )
   }
 
@@ -32,26 +32,26 @@ function handleClick(){
   var authorValue = author.value;
 
   userInput = {quote: quoteValue, author: authorValue}
-  // printToScreen = "\n" + "'" + quote.value + "'" + " - " + author.value;
   appendQuote( userInput );
   quote.value = '';
-  addToArray(userInput)
+  author.value = '';
+  // addToArray(userInput)
 }
 
 function appendQuote(userInput){
   var li = document.createElement( 'li' );
-  li.innerText = userInput.quote + userInput.author;
-  console.log( li );
+  li.innerText = userInput.quote + " - " + userInput.author;
+  // console.log( li );
 
   var ul = document.getElementById( 'quote-list' );
   ul.appendChild( li );
   
 }
 
-function addToArray(userInput){
-quoteList.push(userInput)
-console.log(quoteList[3])
-}
+// function addToArray(userInput){
+// quoteList.push(userInput)
+// console.log(quoteList[3])
+// }
 
 
 
