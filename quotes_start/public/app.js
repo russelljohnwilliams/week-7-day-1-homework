@@ -7,8 +7,6 @@ quoteList = [
 ]
 
 function main(){
-
-  // function appendQuoteList(quoteList){
   var ul = document.getElementById( 'quote-list' );
   for(var i = 0; i < quoteList.length; i++) {
     var li = document.createElement( 'li' );
@@ -18,16 +16,28 @@ function main(){
 
   var btn = document.getElementById('add-button');
   btn.onclick = handleClick;
-
 }
 
 function handleClick(){
   var quote = document.getElementById( 'quote-text-input' )
-  var userInput = quote.value;
- 
+  var quoteValue = quote.value;
+  console.log(quoteValue)
 
-  appendQuote( userInput );
+  var author = document.getElementById( 'author-text-input' )
+  var authorValue = author.value;
+  console.log(authorValue)
+
+  userInput = {quote: quoteValue, author: authorValue}
+  console.log(userInput)
+
+  addToArray( userInput );
   quote.value = '';
+  // console.log(userInput)
+}
+
+function addToArray(userInput){
+quoteList.push(userInput)
+console.log(quoteList[3])
 }
 
 
@@ -35,20 +45,10 @@ function handleClick(){
 
 
 
+// function appendquote(userInput){
+//   var li = document.createElement( 'li' );
+//   li.innerText = userInput;
 
-
-
-
-
-
-
-
-
-
-function appendquote(userInput){
-  var li = document.createElement( 'li' );
-  li.innerText = userInput;
-
-  var ul = document.getElementById( 'film-list' );
-  ul.appendChild( li )
-}
+//   var ul = document.getElementById( 'film-list' );
+//   ul.appendChild( li )
+// }
