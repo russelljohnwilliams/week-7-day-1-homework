@@ -16,23 +16,36 @@ function main(){
 
   var btn = document.getElementById('add-button');
   btn.onclick = handleClick;
+
+  var form = document.getElementById( 'quote-form' );
+  form.onsubmit = function( event ){
+    event.preventDefault();
+    handleClick();
+  }
 }
 
 function handleClick(){
   var quote = document.getElementById( 'quote-text-input' )
   var quoteValue = quote.value;
-  console.log(quoteValue)
 
   var author = document.getElementById( 'author-text-input' )
   var authorValue = author.value;
-  console.log(authorValue)
 
   userInput = {quote: quoteValue, author: authorValue}
-  console.log(userInput)
-
-  addToArray( userInput );
+  // printToScreen = "\n" + "'" + quote.value + "'" + " - " + author.value;
+  appendQuote( userInput );
   quote.value = '';
-  // console.log(userInput)
+  addToArray(userInput)
+}
+
+function appendQuote(userInput){
+  var li = document.createElement( 'li' );
+  li.innerText = userInput.quote + userInput.author;
+  console.log( li );
+
+  var ul = document.getElementById( 'quote-list' );
+  ul.appendChild( li );
+  
 }
 
 function addToArray(userInput){
@@ -43,12 +56,3 @@ console.log(quoteList[3])
 
 
 
-
-
-// function appendquote(userInput){
-//   var li = document.createElement( 'li' );
-//   li.innerText = userInput;
-
-//   var ul = document.getElementById( 'film-list' );
-//   ul.appendChild( li )
-// }
