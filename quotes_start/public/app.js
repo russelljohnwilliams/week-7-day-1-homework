@@ -13,7 +13,6 @@ function main(){
     li.innerText = "\n" + quoteList[i].quote + " - " + quoteList[i].author;
     ul.appendChild( li )
 
-
   }
 
   var btn = document.getElementById('add-button');
@@ -38,7 +37,6 @@ function handleClick(){
   quote.value = '';
   author.value = '';
   // addToArray(userInput)
- 
 }
 
 function appendQuote(userInput){
@@ -47,14 +45,11 @@ function appendQuote(userInput){
 
   var ul = document.getElementById( 'quote-list' );
   ul.appendChild( li );
-  
 }
 
-  function deleteQuote() {
-
+function deleteQuote() {
   var list = document.getElementById("quote-list");
   list.removeChild(list.childNodes[0]); 
-
 }
 
 // function addToArray(userInput){

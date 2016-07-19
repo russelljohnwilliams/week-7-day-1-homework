@@ -1,6 +1,3 @@
-/*@import url(https://fonts.googleapis.com/css?family=Teko:400,500,700,300,600);*/
-
-
 /* Global */
 
 html, body {
@@ -10,10 +7,10 @@ html, body {
 
 body {
   background:
-      linear-gradient(45deg, hsla(328, 83%, 43%, 1) 0%, hsla(328, 83%, 43%, 0) 70%),
-      linear-gradient(135deg, hsla(225, 83%, 56%, 1) 10%, hsla(225, 83%, 56%, 0) 80%),
-      linear-gradient(225deg, hsla(47, 83%, 50%, 1) 10%, hsla(47, 83%, 50%, 0) 80%),
-      linear-gradient(315deg, hsla(210, 91%, 51%, 1) 100%, hsla(210, 91%, 51%, 0) 70%);
+    linear-gradient(45deg, hsla(328, 83%, 43%, 1) 0%, hsla(328, 83%, 43%, 0) 70%),
+    linear-gradient(135deg, hsla(225, 83%, 56%, 1) 10%, hsla(225, 83%, 56%, 0) 80%),
+    linear-gradient(225deg, hsla(47, 83%, 50%, 1) 10%, hsla(47, 83%, 50%, 0) 80%),
+    linear-gradient(315deg, hsla(210, 91%, 51%, 1) 100%, hsla(210, 91%, 51%, 0) 70%);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -66,8 +63,6 @@ form {
  text-align: center;
 }
 
-
-
 .content {
   background-color: rgba( 0, 0, 0, 0.168676 );
   padding: 15px 25px;
@@ -91,7 +86,6 @@ hr {
 }
 
 
-
 blockquote {
   cursor:pointer;
 }
@@ -99,6 +93,8 @@ blockquote {
 blockquote {
   display:inline-block;
 }
+
+/* Form & buttons */
 
 ::-webkit-input-placeholder { color:#000; }
 
