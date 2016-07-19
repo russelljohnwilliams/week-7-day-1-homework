@@ -1,9 +1,9 @@
 window.onload = main;
 
 quoteList = [
-{quote: "Visual Basic is the way forward, I don't know why we are doing JavaScript" , author: "Jay Chetty"},
-{quote: "The only CSS you need to know is background-color: tomato", author: "Rick"},
-{quote: "I used the jQuery diet plugin and lost 10kg in a week", author: "Keith"}
+{quote: "With my sunglasses on, I'm Jack Nicholson. Without them, I'm fat and 60." , author: "Jack Nicolson"},
+{quote: "My acting range has always been something between the two extremes of 'raises left eyebrow' and 'raises right eyebrow", author: "Roger Moore"},
+{quote: "What happens after you die? - Lot's of things happen after you die... they just don't involve you", author: "Louis CK"}
 ]
 
 function main(){
@@ -12,6 +12,8 @@ function main(){
     var li = document.createElement( 'li' );
     li.innerText = "\n" + quoteList[i].quote + " - " + quoteList[i].author;
     ul.appendChild( li )
+
+
   }
 
   var btn = document.getElementById('add-button');
@@ -36,16 +38,23 @@ function handleClick(){
   quote.value = '';
   author.value = '';
   // addToArray(userInput)
+ 
 }
 
 function appendQuote(userInput){
   var li = document.createElement( 'li' );
-  li.innerText = userInput.quote + " - " + userInput.author;
-  // console.log( li );
+  li.innerText = "\n" + userInput.quote + " - " + userInput.author;
 
   var ul = document.getElementById( 'quote-list' );
   ul.appendChild( li );
   
+}
+
+  function deleteQuote() {
+
+  var list = document.getElementById("quote-list");
+  list.removeChild(list.childNodes[0]); 
+
 }
 
 // function addToArray(userInput){

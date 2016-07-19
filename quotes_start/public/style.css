@@ -1,17 +1,24 @@
 /*@import url(https://fonts.googleapis.com/css?family=Teko:400,500,700,300,600);*/
 
+
 /* Global */
 
 html, body {
   height: 100%;
-  font-family: Helvetica;
+  font-family: bungee hairline, helvetica;
 }
 
 body {
-  background: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%) no-repeat center center fixed; 
+  background:
+      linear-gradient(45deg, hsla(328, 83%, 43%, 1) 0%, hsla(328, 83%, 43%, 0) 70%),
+      linear-gradient(135deg, hsla(225, 83%, 56%, 1) 10%, hsla(225, 83%, 56%, 0) 80%),
+      linear-gradient(225deg, hsla(47, 83%, 50%, 1) 10%, hsla(47, 83%, 50%, 0) 80%),
+      linear-gradient(315deg, hsla(210, 91%, 51%, 1) 100%, hsla(210, 91%, 51%, 0) 70%);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* Header */
@@ -27,12 +34,9 @@ header {
 .main-title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 160px;
-  font-weight: 900;
-  transform: rotate(-15deg);
-  font-family: 'Teko', sans-serif;
-  line-height: 120px;
-  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.168627);
+  font-size: 100px;
+  transform: rotate(-10deg);
+  font-family: 'Bungee Shade', sans-serif;
 }
 
 .lead-title {
@@ -40,7 +44,8 @@ header {
 }
 
 .sub-title {
-  color: #feff00;
+  color: white;
+  font-size: 120px;
 }
 
 /* Text */
@@ -60,6 +65,8 @@ form {
  display: inline-block;
  text-align: center;
 }
+
+
 
 .content {
   background-color: rgba( 0, 0, 0, 0.168676 );
@@ -83,13 +90,6 @@ hr {
   list-style: none;
 }
 
-.my-button {
-  padding: 8px;
-  height: 40px;
-  background: #FEFF8A;
-  border-radius: 5px;
-  font-size: 20px;
-}
 
 
 blockquote {
@@ -100,3 +100,27 @@ blockquote {
   display:inline-block;
 }
 
+::-webkit-input-placeholder { color:#000; }
+
+.input
+{
+  width: 30%;
+  height: 30px;
+  padding: 12px 20px;
+  margin: 8px 7px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border: none;
+  background-color: grey;
+}
+
+.button
+{
+  width: 16%;
+  height: 30px;
+  margin: 8px 7px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border: none;
+  background-color: grey;
+}
